@@ -50,7 +50,10 @@ Also includes functionality for converting videos from .mov to .mp4 format, beca
 
 ### How To Use (Individual Video and/or Non-Default Location)
 - From the command line, execute `python compressor.py --desired_size $SIZE --video_path $VIDEO_PATH`
-  - $SIZE is the desired size of each video file in the `input` folder (what to try to compress to) in Kb
+  - $SIZE is the desired size of each video file in the `input` folder (what to try to compress to)
+    - This works in a kinda non-intuitive way. Basically it works off of the "magnitude" your video file is already at (e.g. if your video is 100 MB, declaring `--desired_size 1` will attempt to compress to 1 MB. If your video is 100 KB, declaring `--desired_size 1` will attempt to compress to 1 KB)
+    - To cut down into a smaller magnitude (e.g. go from MB to KB), try supplying fractions (e.g. `--desired_size 0.5`)
+    - READ the top troubleshooting point in the section below-- you can't compress TOO much or ffmpeg will chunder
   - $VIDEO_PATH is the path to the video file you want to convert and/or compress
 - Wait for the conversion+compression functions to run
 - Check the same folder the source video resides in for a new `*-compressed.mp4` file-- this is your compressed video
