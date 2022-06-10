@@ -67,11 +67,11 @@ def compress_video(video_path, output_name, size):
 
 # An orchestrator function to handle processing a video, including conversion from .mov format and compressing
 def process_video(video_path, size, process_mov):
-    print(f">>> Processing {input_file}...")
+    print(f">>> Processing {video_path}...")
     converted_video_filename = video_path
 
     # Convert input files from .mov to .mp4 format by default
-    if input_file[-4:] == ".mov" and process_mov:
+    if video_path[-4:] == ".mov" and process_mov:
         converted_video_filename = video_path.replace('.mov', '.mp4')
         convert_mov(video_path, converted_video_filename)
     processed_video_filename = f"{converted_video_filename[:-4]}-compressed{converted_video_filename[-4:]}"
