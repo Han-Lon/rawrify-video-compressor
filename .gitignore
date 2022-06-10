@@ -6,7 +6,7 @@ venv/
 
 # Ignore media input folder
 input/*
-!input/README.md
+!dist/input/README.md
 
 # Ignore PyInstaller Build Files
 *.spec

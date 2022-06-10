@@ -25,6 +25,14 @@ There are limitations on how much a video can be compressed, but this works pret
 Also includes functionality for converting videos from .mov to .mp4 format, because simply converting to .mp4 reduces size by a significant amount.
 
 
+### Easy Method (Windows Only... For Now)
+- If you want the lowest effort installation process, read this section
+- [Go to the Releases page for this project](https://github.com/Han-Lon/rawrify-video-compressor/releases) and find the most recent "rawrify-video-compressor-windows.zip" file
+- Download it
+- Extract it to whichever folder you want
+- Voila! You are ready to go since it comes pre-packaged with all the Python and FFmpeg dependencies. Refer to the sections below (except Prerequisites) for how to use it
+  - Please note you will NOT have to use the `python` keyword for running this-- you can just use `./compressor.exe --desired_size=<DESIRED_SIZE>` and so on
+
 ### Prerequisites
 - Python 3.8+ recommended, but most 3.0+ versions should work
 - Install the required Python packages in requirements.txt using `pip install -r requirements.txt`
